@@ -31,11 +31,9 @@ const getSmallest = (arr) => {
 
 const countValue = (arr, num) => {
 
-    if (arr && !num ) {
+    if (typeof num !== 'number' ) {
         return null
-    }
-
-    if (arr.length === 0 && num == true) {
+    } else if (arr.length === 0 && num == true) {
         return 0
     }
 
@@ -43,7 +41,7 @@ const countValue = (arr, num) => {
     arr.forEach((e)=>{
         
         if (e === num) {
-            count += 1
+            count += 1            
         }
         
     })
